@@ -5,48 +5,77 @@
 </head>
 <body>
     <header class="header-museo">
-    <div class="logo">
-        <div class="foto-logo"></div> <h1>Museo de la Memoria</h1>
-    </div>
+        <div class="logo">
+            <div class="foto-logo"></div> <h1>Museo de la Memoria</h1>
+        </div>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cronologia.html">Cronología</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="testimonios.html">Testimonios</a></li>
-            <li><a href="clasificador.html">Clasificador</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="clasificador.html">Clasificador</a></li>
+            </ul>
+        </nav>
 
-    <div class="buscador">
-        <input type="text" placeholder="Buscar...">
-        <span class="lupa"></span>
-    </div>
     </header>
     <h1>TU VOZ CUENTA</h1>
-    <form action="" method="post">
+    <form action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
+    <h3>DONA</h3>
+    <div class="campo">
+        <label for="nombreCompleto">Nombre completo</label><br><br>
+        <input type="text" id="nombreCompleto" name="nombre"><br><br>
+    </div>
+    <div class="campo">
+        <label for="correo">Correo electrónico</label><br><br>
+        <input type="email" id="correo" name="correo"><br><br>
+    </div>
+    <div id="otra" class="campo">
+        <label for="cant">Cantidad a donar</label><br><br>
+        <div class="botones">
+            <button type="button"  onclick="gestionar(this)">60€</button>
+            <button type="button"  onclick="gestionar(this)">80€</button>
+            <button type="button"  onclick="gestionar(this)">120€</button>
+            <button type="button"  onclick="gestionar(this); mostrar()">OTRA</button>
+        </div><br>
+    </div><br>
+    <div class="campo">
+        <input type="checkbox" id="bot1">
+        <label for="bot1">Acepto la política de privacidad</label><br>
+        <input type="checkbox" id="bot2">
+        <label for="bot2">Deseo recibir un correo con la confirmación de la donación</label><br><br>
+    </div>
 
-    <div class="campo">
-        <label for="nombreCompleto">Nombre Completo</label>
-        <input type="text" id="nombreCompleto" name="nombre">
-    </div>
-    <div class="campo">
-        <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo">
-    </div>
-    <div class="campo">
-        <label for="suscripcion">Tipo de suscripción</label>
-            <select id="suscripcion" name="suscripcion">
-                <option value="basica">Básica (gratis)</option>
-                <option value="premium">Premium (donativo mensual)</option>
-                <option value="estudiante">Estudiante</option>
-            </select>       
-    </div>
-    <div>
-        
-    </div>
+    <input type="submit" value="Donar">
+    <div id="mensajes"></div>
     </form>
+    <script>
+        function gestionar(elem){
+            var dinero=document.getElementById("dinero");
+            if (dinero){
+                dinero.remove();
+            }
+            var botones = document.querySelectorAll('.botones button');
+            for (var i=0;i<botones.length;i++){
+                botones[i].style.backgroundColor = "";
+                botones[i].style.color = "";
+            }
+            elem.style.backgroundColor = "#fe5929";
+            elem.style.color = "white";
+        }
+        function mostrar(){
+            var div=document.getElementById("otra");
+            var input=document.createElement("input");
+            input.type="text";
+            input.id="dinero";
+            div.appendChild(input);
+        }
+        function validar(event){
+            event.preventDefault();
+ 
+        }
+    </script>
 </body>
 
 </html>
