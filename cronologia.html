@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronología</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo de la Memoria - Cronología Palestina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="circle-logo"></div>
+            Museo de la Memoria
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cronologia.html">Cronología</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="testimonios.html">Testimonios</a></li>
+                <li><a href="clasificador.html">Clasificador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="map-container">
+            <img id="mapa-img" src="/mapa.jpg" alt="Mapa de Palestina">
+        </div>
+        
+        <br>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            
+            <button class="timeline-btn active" 
+                    data-year="1917" 
+                    onclick="cambiarEra('1917')">1917</button>
+
+            <button class="timeline-btn" 
+                    data-year="1947" 
+                    onclick="cambiarEra('1947')">1947</button>
+
+            <button class="timeline-btn" 
+                    data-year="1948" 
+                    onclick="cambiarEra('1948')">1948</button>
+
+            <button class="timeline-btn" 
+                    data-year="1967" 
+                    onclick="cambiarEra('1967')">1967</button>
+
+            <button class="timeline-btn" 
+                    data-year="Presente" 
+                    onclick="cambiarEra('Presente')">Presente</button>
+        </div>
+
+        <div class="info-card">
+            <h2 id="titulo-era">1917: Antes de la creación de Israel</h2>
+            <p id="texto-era">
+                Aquí irá el texto explicativo correspondiente al año 1917. 
+                Palestina antes de la creación del estado de Israel, mostrando la población y distribución original.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+  
+    </footer>
+
+</body>
+</html>
