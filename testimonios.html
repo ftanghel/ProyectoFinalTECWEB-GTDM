@@ -1,16 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Testimonios - Museo de la Memoria</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        /* Sección Cabecera */
+        #cabecera {
+            background-color: #666;
+            color: white;
+            padding: 120px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-aprende {
+            background-color: black;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        /* Sección Galería */
+        #centro {
+            padding: 80px 20px;
+        }
+
+        .contenedor-cartas {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
+            gap: 50px 30px; /* Mayor separación vertical (50px) entre filas */
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        /* Contenedor individual: Carta + Nombre */
+        .bloque-testimonio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo del nombre (FUERA de la carta) */
+        .nombre-persona {
+            margin-top: 20px; /* Separación entre la imagen y el nombre */
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Estructura de la Carta (Giro) */
+        .carta {
+            background-color: transparent;
+            width: 100%;
+            height: 250px;
+            perspective: 1000px;
+        }
+
+        .carta-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .carta:hover .carta-inner {
+            transform: rotateY(180deg) scale(1.05);
+        }
+
+        .carta-front, .carta-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .carta-front {
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .read-more {
+            font-size: 10px;
+            text-align: left;
+            background: #dcdcdc;
+            padding: 3px 6px;
+            width: fit-content;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+
+        .foto-placeholder {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-weight: bold;
+        }
+
+        .carta-back {
+            background-color: #333;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .header-museo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            padding: 10px 40px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
     <header class="header-museo">
         <div class="logo">
-            <div class="foto-logo"></div> <h1>Museo de la Memoria</h1>
+            <div class="foto-logo"></div> 
+            <h1>Museo de la Memoria</h1>
         </div>
-
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
@@ -20,7 +158,190 @@
                 <li><a href="clasificador.html">Clasificador</a></li>
             </ul>
         </nav>
+    </header>
 
-    </header>   
+    <div id="cabecera">
+        <h2>Voces del pasado</h2>
+        <button class="btn-aprende" onclick="document.getElementById('centro').scrollIntoView()">Aprende más</button>
+    </div>
+
+    <div id="centro">
+        <h3>Escucha sus historias</h3>
+        <p>Haz clic o pasa el ratón para conocer el testimonio</p>
+        
+        <div class="contenedor-cartas">
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Read Testimony</span>
+                            <div class="foto-placeholder">foto</div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Nombre Apellido</div>
+            </div>
+            
+
+            </div>
+    </div>
+
 </body>
 </html>
