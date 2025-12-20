@@ -2,6 +2,108 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <style>
+                /* Contenedor para poner el texto a la izquierda y el form a la derecha */
+        .contenedor-principal {
+            display: flex;
+            justify-content: space-around; /* Separa los elementos */
+            align-items: center;           /* Los centra verticalmente */
+            min-height: 70vh;              /* Altura para que respire la página */
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo para el texto gigante de la izquierda */
+        .titulo-izquierda {
+            font-size: 60px; /* Tamaño grande como en la imagen */
+            max-width: 400px;
+            line-height: 1.1;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* El recuadro del formulario (más pequeño) */
+        #formulario {
+            background-color: #d3d3d3; 
+            padding: 25px;            /* Menos espacio interno para que sea pequeño */
+            border-radius: 12px;
+            width: 320px;             /* Ancho reducido */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;   /* Alinea el contenido interno */
+            align-items: center;      /* Centra los elementos dentro del form */
+        }
+
+        /* Título DONA dentro del recuadro */
+        #formulario h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Ajuste de los campos de texto internos */
+        .campo {
+            width: 100%; /* Para que ocupen todo el ancho del form pequeño */
+        }
+
+        .campo label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            text-align: center; /* Alinea etiquetas a la izquierda del input */
+        }
+
+        input[type="text"], 
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Botones de cantidad más compactos */
+        .botones {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .botones button {
+            padding: 5px 10px;
+            font-size: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #b0a8a6;
+        }
+
+        /* Checkboxes texto pequeño */
+        .campo input[type="checkbox"] + label {
+            font-size: 13px;
+            font-weight: normal;
+            display: inline;
+        }
+
+        /* Botón DONAR (el grande de abajo) */
+        input[type="submit"] {
+            background-color: #9e9795;
+            color: black;
+            border: none;
+            width: 160px;    /* No ocupa todo el ancho, más pequeño */
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #8a8381;
+        }
+    </style>
 </head>
 <body>
     <header class="header-museo">
@@ -20,36 +122,39 @@
         </nav>
 
     </header>
-    <h1>TU VOZ CUENTA</h1>
-    <form id="formulario" action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
-    <h3>DONA</h3>
-    <div class="campo">
-        <label for="nombreCompleto">Nombre completo</label><br><br>
-        <input type="text" id="nombreCompleto" name="nombre"><br><br>
-    </div>
-    <div class="campo">
-        <label for="correo">Correo electrónico</label><br><br>
-        <input type="email" id="correo" name="correo"><br><br>
-    </div>
-    <div id="otra" class="campo">
-        <label for="cant">Cantidad a donar</label><br><br>
-        <div class="botones">
-            <button type="button"  onclick="gestionar(this)">60€</button>
-            <button type="button"  onclick="gestionar(this)">80€</button>
-            <button type="button"  onclick="gestionar(this)">120€</button>
-            <button type="button"  onclick="gestionar(this); mostrar()">OTRA</button>
+    <div class="contenedor-principal">
+        <h1>TU VOZ CUENTA</h1>
+        <form id="formulario" action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
+        <h3>DONA</h3>
+        <div class="campo">
+            <label for="nombreCompleto">Nombre completo</label><br>
+            <input type="text" id="nombreCompleto" name="nombre"><br><br>
+        </div>
+        <div class="campo">
+            <label for="correo">Correo electrónico</label><br>
+            <input type="email" id="correo" name="correo"><br><br>
+        </div>
+        <div id="otra" class="campo">
+            <label for="cant">Cantidad a donar</label><br>
+            <div class="botones">
+                <button type="button"  onclick="gestionar(this)">60€</button>
+                <button type="button"  onclick="gestionar(this)">80€</button>
+                <button type="button"  onclick="gestionar(this)">120€</button>
+                <button type="button"  onclick="gestionar(this); mostrar()">OTRA</button>
+            </div><br>
         </div><br>
-    </div><br>
-    <div class="campo">
-        <input type="checkbox" id="bot1">
-        <label for="bot1">Acepto la política de privacidad</label><br>
-        <input type="checkbox" id="bot2">
-        <label for="bot2">Deseo recibir un correo con la confirmación de la donación</label><br><br>
-    </div>
+        <div class="campo opciones-check">
+            <input type="checkbox" id="bot1">
+            <label for="bot1">Acepto la política de privacidad</label><br>
+            <input type="checkbox" id="bot2">
+            <label for="bot2">Deseo recibir un correo con la confirmación de la donación</label><br><br>
+        </div>
 
-    <input type="submit" value="Donar"><br><br>
-    <div id="mensajes"></div>
-    </form>
+        <input type="submit" class="boton-enviar" value="Donar"><br><br>
+        <div id="mensajes"></div>
+        </form>
+    </div>
+    
     <script>
         function gestionar(elem){
             var dinero=document.getElementById("dinero");
@@ -69,7 +174,7 @@
             var input=document.createElement("input");
             input.type="number";
             input.id="dinero";
-            input.min=0;
+            input.min=1;
             input.step=1;
             div.appendChild(input);
         }
