@@ -1,0 +1,62 @@
+/* fuentes */
+@font-face {
+    font-family: 'NOW';         
+    src: url('Now-Bold.otf');    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #fffdf6; 
+}
+
+
+header {
+    background-color: #fffdf6;
+    border-bottom: 2px solid #231f20; 
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Caja que agrupa la imagen y el texto del logo */
+.caja-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-foto {
+    height: 50px; 
+    width: auto;
+}
+
+.nombre-museo {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 18px;
+    line-height: 1.1;
+    color: #231f20;
+    font-weight: bold;
+}
+
+
+.menu-navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #231f20;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu-navegacion a:hover {
+    color: #fe5929; 
+    text-decoration: underline;
+}
