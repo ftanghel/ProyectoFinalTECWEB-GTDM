@@ -3,67 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museo de la Memoria - Página Principal</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Museo de la Memoria</title>
+    <link rel="stylesheet" href="cabecera.css">
+    <link rel="stylesheet" href="estiloindex.css">
 </head>
 <body>
+
     <header>
-        <div class="logo">
-            <div class="circle-logo"></div>
-            Museo de la Memoria
+        <div class="caja-logo">
+            <img src="LOGOMUSEOMEMORIA.png" alt="Logo" class="logo-foto">
+            <div class="nombre-museo">
+                Museo de<br>
+                la Memoria
+            </div>
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cronologia.html">Cronología</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="testimonios.html">Testimonios</a></li>
-                <li><a href="clasificador.html">Clasificador</a></li>
-            </ul>
+        
+        <nav class="menu-navegacion">
+            <a href="index.html">Home</a>
+            <a href="cronologia.html">Cronología</a>
+            <a href="galeria.html">Galería</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="clasificador.html">Clasificador</a>
         </nav>
     </header>
 
-    <section class="hero-banner">
+    <section class="banner">
+        <div class="triangulo-adorno"></div>
+
         <h1>Museo de la Memoria</h1>
-        <p>Un espacio dedicado a preservar y compartir la memoria de Palestina.</p>
+        <p>
+            Un espacio dedicado a preservar y compartir la memoria de Palestina.
+        </p>
     </section>
 
-    <main class="container">
-        <section class="ods-intro">
-            <div class="ods-text-block">
+    <main class="cuerpo-pagina">
+        
+        <div class="bloque-ods">
+            <div class="mitad-texto">
                 <h2>Objetivos de Desarrollo Sostenible</h2>
                 <p>Conozca los ODS que promueven la paz y la igualdad.</p>
             </div>
-            <div class="ods-placeholder"></div>
-        </section>
+            <div class="marco-simple"></div> 
+        </div>
 
-        <section class="ods-cards-row">
-            <div class="ods-card">
-                <div class="card-img-placeholder"></div>
-                <div class="card-content">
+        <div class="mis-tarjetas">
+            
+            <div class="tarjeta-individual">
+                <div class="cuadro-negro"></div>
+                <div class="info-tarjeta">
                     <h3>ODS 16</h3>
                     <h4>Paz, Justicia e Instituciones Sólidas</h4>
-                    <p>Abogamos por sociedades pacíficas e inclusivas.</p>
-                    <div class="tags">
-                        <span class="tag">Justicia</span>
-                        <span class="tag">Paz</span>
+                    <p>Abogamos por sociedades pacíficas.</p>
+                    <div class="etiquetas">
+                        <span>Justicia</span><span>Paz</span>
                     </div>
                 </div>
             </div>
 
-            <div class="ods-card">
-                <div class="card-img-placeholder"></div>
-                <div class="card-content">
+            <div class="tarjeta-individual">
+                <div class="cuadro-negro"></div>
+                <div class="info-tarjeta">
                     <h3>ODS 10</h3>
                     <h4>Reducción de las Desigualdades</h4>
-                    <p>Trabajamos por la equidad y la justicia social.</p>
-                    <div class="tags">
-                        <span class="tag">Inequidad</span>
-                        <span class="tag">Igualdad</span>
+                    <p>Trabajamos por la equidad social.</p>
+                    <div class="etiquetas">
+                        <span>Inequidad</span><span>Igualdad</span>
                     </div>
                 </div>
             </div>
-        </section>
+
+        </div>
     </main>
 
     <footer></footer>

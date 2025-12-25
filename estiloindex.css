@@ -1,0 +1,118 @@
+/* ESTILOS  */
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+/* BANNER */
+.banner {
+    background-color: #231f20;
+    text-align: center;
+    padding: 90px 20px;
+
+    position: relative; 
+    overflow: hidden;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin: 0 0 15px 0;
+    color: #f5d246; 
+}
+
+.banner p {
+    font-size: 18px;
+    font-weight: 400;
+    color:white;
+}
+
+
+/* triangulo aaaaahhhh */
+.triangulo-adorno {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    background-color: #fe5929;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* CUERPO*/
+.cuerpo-pagina {
+    width: 80%;
+    margin: 60px auto; 
+}
+
+.bloque-ods {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.mitad-texto {
+    width: 50%;
+}
+
+.bloque-ods h2 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+
+.marco-simple {
+    width: 50%;
+    height: 250px;
+    background-color: #fffdf6; 
+    border: 2px solid #231f20;
+}
+
+.mis-tarjetas {
+    display: flex;
+    gap: 30px;
+}
+
+.tarjeta-individual {
+    flex: 1;
+    border: 1px solid #231f20;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    background-color: #fffdf6;
+    box-shadow: 6px 6px 0px rgba(35, 31, 32, 0.1); /* Sombrita */
+}
+
+.cuadro-negro {
+    width: 100px;
+    height: 100px;
+    background-color: #231f20;
+    flex-shrink: 0;
+}
+
+.info-tarjeta h3 {
+    margin-top: 0;
+    color: #231f20;
+    font-size: 22px;
+    text-decoration: underline;
+    text-decoration-color: #fe5929;
+}
+
+.info-tarjeta h4 {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+    font-weight: normal;
+}
+
+
+.etiquetas span {
+    background-color: #231f20;
+    color: #fffdf6;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: bold;
+}
