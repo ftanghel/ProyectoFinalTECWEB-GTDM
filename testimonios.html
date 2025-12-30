@@ -4,159 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonios - Museo de la Memoria</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            text-align: center;
-        }
-
-        /* Sección Cabecera */
-        #cabecera {
-            background-color: #666;
-            color: white;
-            padding: 120px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .btn-aprende {
-            background-color: black;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            display: inline-block;
-        }
-
-        /* Sección Galería */
-        #centro {
-            padding: 80px 20px;
-        }
-
-        .contenedor-cartas {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
-            gap: 50px 30px; /* Mayor separación vertical (50px) entre filas */
-            max-width: 1100px;
-            margin: 50px auto;
-        }
-
-        /* Contenedor individual: Carta + Nombre */
-        .bloque-testimonio {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Estilo del nombre (FUERA de la carta) */
-        .nombre-persona {
-            margin-top: 20px; /* Separación entre la imagen y el nombre */
-            font-weight: bold;
-            color: #333;
-            font-size: 16px;
-        }
-
-        /* Estructura de la Carta (Giro) */
-        .carta {
-            background-color: transparent;
-            width: 100%;
-            height: 250px;
-            perspective: 1000px;
-        }
-
-        .carta-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-            cursor: pointer;
-        }
-
-        .carta:hover .carta-inner {
-            transform: rotateY(180deg) scale(1.05);
-        }
-
-        .carta-front, .carta-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .carta-front {
-            background-color: #eee;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .read-more {
-            font-size: 10px;
-            text-align: left;
-            background: #dcdcdc;
-            padding: 3px 6px;
-            width: fit-content;
-            border-radius: 2px;
-            text-transform: uppercase;
-        }
-
-        .foto-placeholder {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            font-weight: bold;
-        }
-
-        .carta-back {
-            background-color: #333;
-            color: white;
-            transform: rotateY(180deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        .header-museo {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: start;
-            padding: 10px 40px;
-            background-color: white;
-            border-bottom: 1px solid #ddd;
-        }
-    </style>
+    <link rel="stylesheet" href="cabecera.css">
+    <link rel="stylesheet" href="testimonios.css">
 </head>
 <body>
-    <header class="header-museo">
-        <div class="logo">
-            <div class="foto-logo"></div> 
-            <h1>Museo de la Memoria</h1>
+    <header>
+        <div class="caja-logo">
+            <img src="LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
+            <div class="nombre-museo">
+                Museo de<br>
+                la Memoria
+            </div>
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cronologia.html">Cronología</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="testimonios.html">Testimonios</a></li>
-                <li><a href="clasificador.html">Clasificador</a></li>
-            </ul>
+        
+        <nav class="menu-navegacion">
+            <a href="index.html">Home</a>
+            <a href="cronologia.html">Cronología</a>
+            <a href="galeria.html">Galería</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="clasificador.html">Clasificador</a>
         </nav>
     </header>
 
@@ -174,7 +40,186 @@
                 <div class="carta">
                     <div class="carta-inner">
                         <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto1.jpg" >
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Anas Ayesh, nieto de palestinos desplazados, regresó a 
+                                Gaza poco antes del 7 de octubre de 2023, tras casi una 
+                                década sin ver a su familia. Después de que comenzara el 
+                                genocidio, quedó atrapado en la ofensiva israelí.“Aquí hay 
+                                dos maneras de acabar con la vida: la primera es el bombardeo,
+                                 una muerte rápida que no deja rastro del cuerpo. La segunda,
+                                  más lenta, es por hambre.”</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Anas Ayesh</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto2.webp">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>A pesar de la destrucción de su hogar y la necesidad 
+                                de reubicarse al menos 13 veces, la herida más profunda
+                                para Ayam fue la muerte de su hijo Ahmed, de 17 años, víctima
+                                de cáncer durante la ofensiva israelí, y también de su hija Amina.
+                                “Ella y mi nieto traían alegría a toda la familia. Era una madre
+                                maravillosa y cariñosa. Sentí que perdí una parte de mi alma”.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Ayman Rihan</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto3.webp">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Palestino de 50 años con cuatro hijos. “A veces, 
+                                desearía que la muerte me hubiera llevado antes 
+                                de tener que presenciar su sufrimiento y ver sus 
+                                caritas pálidas”. Hoy, su familia vive en una carpa
+                                improvisada. No hay agua, ni electricidad, ni acceso
+                                 a lo más básico. Khalid arriesga su vida en las filas
+                                  de ayuda, aunque las balas y el hambre se cruzan en 
+                                  su camino cada día.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Khalid Alraee</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto4.webp">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Cuando comenzaron a caer las bombas el 7 de noviembre
+                                de 2023, Ahmad comenzó a recitar sus oraciones, y Adam
+                                se unió a él, aterrorizado. Hasta que, de pronto, un 
+                                ataque aéreo destruyó la mitad de la casa de los Al-Ayyobi. 
+                                Con su hogar destruido, la familia se dirigió al sur de Gaza. 
+                                Mientras viajaban rumbo a Netzarim vieron cuerpos de palestinos
+                                esparcidos a lo largo del camino. "Intenté evitar que Adam 
+                                viera esas horribles escenas”, explica. “Ya había sufrido suficiente".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Ahmad Al-Ayyobi</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto5.jpg">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Cuando el alto el fuego en Gaza fue una realidad Khamis,
+                                su esposa, sus cuatro hijos y sus dos hijas recorrieron 15 
+                                kilómetros a pie, de regreso al norte de Gaza por Al-Rasheed. 
+                                "Decidimos regresar a Shujaiya a pesar de la destrucción de nuestra
+                                 casa. Tuve que gastar todo el dinero que había ahorrado para la 
+                                 boda de mi hijo en comprar una tienda, comida y algunos colchones. 
+                                 Y, aun así, la tienda no nos protegía del frío. Los niños sufrieron más".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Khamis Al-Dardasawi</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto6.jpg">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Muawiya Al-Wahidi hace siete años instaló su local
+                                en Al-Sabra. El 12 de mayo de 2021 se dirigía a su 
+                                barbería cuando un avión israelí lanzó una bomba. En aquel
+                                 ataque, Muawiya perdió su pierna derecha, y por poco 
+                                 también la izquierda. Además, el estruendo del bombardeo 
+                                 le arrebató el 80% de la audición. “En un abrir y cerrar 
+                                 de ojos, perdí la capacidad de caminar. De repente, no pude
+                                  trabajar ni hacer nada por mí mismo. Me costó aceptar el hecho
+                                   de que necesitaba ayuda para todo”.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Muawiya Al-Wahidi</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto7.jpeg">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>En 2023, Duaa obtuvo el título de maestra de escuela. Dos meses después,
+                                estalló la ofensiva de Israel en Gaza. Duaa y su familia fueron forzados a
+                                evacuar. Por el campamento observó a muchos niños desplazados. Decidió crear 
+                                un aula improvisada en el campo de refugiados. Con el respaldo de su familia, consiguió
+                                los suministros necesarios y poco a poco, Duaa empezó a regresar a una vida de enseñanza. 
+                                Informó a las familias del campamento sobre la iniciativa, a la que llamó "Clase de Paz y Libertad". 
+                                "Se refiere al derecho de los niños a vivir en paz y libertad, derechos que la guerra les ha arrebatado", 
+                                explica Duaa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Duaa Qudaih</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
+                            <div class="foto-placeholder">
+                                <img src="../proyecto/img_testimonios/foto8.jpg">
+                            </div>
+                        </div>
+                        <div class="carta-back">
+                            <p>Saad es un niño palestino de 5 años.  Una bomba que
+                                cayó sobre la que era su casa le provocó un traumatismo
+                                 craneoencefálico que le dejó ciego. Ahora, "dice que sus 
+                                 ojos se han ido al cielo antes que él". Muchos niños hablan 
+                                 de la muerte, y no porque teman tanto morir, sino que sus padres 
+                                 mueran y se queden solos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nombre-persona">Saad</div>
+            </div>
+            <div class="bloque-testimonio">
+                <div class="carta">
+                    <div class="carta-inner">
+                        <div class="carta-front">
+                            <span class="read-more">Leer testimonio</span>
                             <div class="foto-placeholder">foto</div>
                         </div>
                         <div class="carta-back">
@@ -188,7 +233,7 @@
                 <div class="carta">
                     <div class="carta-inner">
                         <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
+                            <span class="read-more">Leer testimonio</span>
                             <div class="foto-placeholder">foto</div>
                         </div>
                         <div class="carta-back">
@@ -202,7 +247,7 @@
                 <div class="carta">
                     <div class="carta-inner">
                         <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
+                            <span class="read-more">Leer testimonio</span>
                             <div class="foto-placeholder">foto</div>
                         </div>
                         <div class="carta-back">
@@ -216,119 +261,7 @@
                 <div class="carta">
                     <div class="carta-inner">
                         <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
-                            <div class="foto-placeholder">foto</div>
-                        </div>
-                        <div class="carta-back">
-                            <p>Aquí va el texto del testimonio que se lee al girar la carta.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="nombre-persona">Nombre Apellido</div>
-            </div>
-            <div class="bloque-testimonio">
-                <div class="carta">
-                    <div class="carta-inner">
-                        <div class="carta-front">
-                            <span class="read-more">Read Testimony</span>
+                            <span class="read-more">Leer testimonio</span>
                             <div class="foto-placeholder">foto</div>
                         </div>
                         <div class="carta-back">

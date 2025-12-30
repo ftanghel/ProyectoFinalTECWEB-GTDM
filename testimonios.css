@@ -1,0 +1,156 @@
+html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        /* Sección Cabecera */
+        #cabecera {
+            background-color: #666;
+            color: #fffdf6;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-image: url("fotocentro.jpeg");
+            background-size: cover;       /* Hace que la foto cubra todo el espacio */
+            background-position: center;
+        }
+
+        .btn-aprende {
+            background-color: black;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+        }
+
+        /* Sección Galería */
+        #centro {
+            padding: 80px 20px;
+        }
+
+        .contenedor-cartas {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
+            gap: 50px 30px; /* Mayor separación vertical (50px) entre filas */
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        /* Contenedor individual: Carta + Nombre */
+        .bloque-testimonio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo del nombre (FUERA de la carta) */
+        .nombre-persona {
+            margin-top: 20px; /* Separación entre la imagen y el nombre */
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Estructura de la Carta (Giro) */
+        .carta {
+            background-color: transparent;
+            width: 100%;
+            height: 250px;
+            perspective: 1000px;
+        }
+
+        .carta-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .carta:hover .carta-inner {
+            transform: rotateY(180deg) scale(1.05);
+        }
+
+       /* Aseguramos que la carta tenga un tamaño fijo y no se mueva */
+        .carta {
+            background-color: transparent;
+            width: 100%;
+            height: 250px; /* Mantén la altura que tenías */
+            perspective: 1000px;
+        }
+
+        /* El contenedor que gira */
+        .carta-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        /* Las dos caras: frente y espalda */
+        .carta-front, .carta-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Oculta la cara que no se ve */
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden; /* Corta la foto para que respete el borde redondeado */
+        }
+
+        /* Cara Frontal: Prioridad a la imagen */
+        .carta-front {
+            z-index: 2;
+            transform: rotateY(0deg);
+            padding: 0; /* Quitamos el padding para que la foto llegue al borde */
+        }
+
+        /* La imagen dentro del frente */
+        .foto-placeholder, .foto-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la foto sin deformarla */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .carta-back {
+            background-color: #333;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center; /* Centra el texto verticalmente */
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 12px;   
+        }
+
+        /* El texto "Leer testimonio" flotando */
+        .read-more {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10; /* Lo pone por delante de la foto */
+            font-size: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 4px 8px;
+            border-radius: 2px;
+            color: #333;
+            font-weight: bold;
+        }

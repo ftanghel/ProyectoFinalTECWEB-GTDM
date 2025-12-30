@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="cabecera.css">
     <style>
                 /* Contenedor para poner el texto a la izquierda y el form a la derecha */
         .contenedor-principal {
@@ -106,22 +107,23 @@
     </style>
 </head>
 <body>
-    <header class="header-museo">
-        <div class="logo">
-            <div class="foto-logo"></div> <h1>Museo de la Memoria</h1>
-        </div>
-
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cronologia.html">Cronología</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="testimonios.html">Testimonios</a></li>
-                <li><a href="clasificador.html">Clasificador</a></li>
-            </ul>
-        </nav>
-
-    </header>
+        <header>
+            <div class="caja-logo">
+                <img src="LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
+                <div class="nombre-museo">
+                    Museo de<br>
+                    la Memoria
+                </div>
+            </div>
+            
+            <nav class="menu-navegacion">
+                <a href="index.html">Home</a>
+                <a href="cronologia.html">Cronología</a>
+                <a href="galeria.html">Galería</a>
+                <a href="testimonios.html">Testimonios</a>
+                <a href="clasificador.html">Clasificador</a>
+            </nav>
+        </header>
     <div class="contenedor-principal">
         <h1>TU VOZ CUENTA</h1>
         <form id="formulario" action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
