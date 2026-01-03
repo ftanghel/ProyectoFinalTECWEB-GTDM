@@ -2,110 +2,191 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <style>
+    <title>Galería - Museo de la Memoria</title>
+<style>
 
-.seccion-recomendados {
-    margin-top: 40px;
-    padding: 0 20px;
-}
 
-.seccion-recomendados h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-}
-
-.fila-fotos {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px; 
-    flex-wrap: wrap;
-}
-
-.fotos {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    overflow: hidden;
-    width: 23%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-    transition: transform 0.2s;
-}
+</style>
+    <link rel="stylesheet" href="cabecera.css">
+    <link rel="stylesheet" href="galeria.css">
 
 
 
-.foto-tarjeta {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    background-color: #e0e0e0;
-    display: block;
-}
-
-.texto-tarjeta {
-    padding: 15px;
-    border-top: 1px solid #f0f0f0; 
-}
-
-.texto-tarjeta p {
-    margin: 0;
-    color: #333;
-    font-size: 14px;
-}
-
-    </style>
 </head>
 <body>
 
-    <header class="header-museo">
-    <div class="logo">
-        <div class="foto-logo"></div> <h1>Museo de la Memoria</h1>
-    </div>
-
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cronologia.html">Cronología</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="testimonios.html">Testimonios</a></li>
-            <li><a href="clasificador.html">Clasificador</a></li>
-        </ul>
-    </nav>
-
-    </header>
-<section class="seccion-fotos">
-    <h2>FOTOGRAFIAS</h2>
-    
-    <div class="fila-fotos">
+    <header>
+        <div class="caja-logo">
+            <img src="LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
+            <div class="nombre-museo">
+                Museo de<br>
+                la Memoria
+            </div>
+        </div>
         
-        <div class="fotos">
-            <img src="" alt="Descripción" class="foto-tarjeta">
-            <div class="texto-tarjeta">
-                <p>Lorem ipsum</p>
+        <nav class="menu-navegacion">
+            <a href="index.html">Home</a>
+            <a href="cronologia.html">Cronología</a>
+            <a href="galeria.html" style="font-weight:bold;">Galería</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="clasificador.html">Clasificador</a>
+        </nav>
+    </header>
+    
+    <section class="seccion-fotos">
+        <h2>FOTOGRAFÍAS</h2>
+        
+        <div class="contenedor-carrusel">
+            <img class="flecha-btn izquierda" onclick="moverIzquierda()" onmouseover="flecha_hover(this)" onmouseout="flecha_normal(this)" src="img_galeria/boton-de-flecha.png">
+
+            <div class="fila-fotos" id="galeria">
+                
+                <div class="fotos">
+                    <div class="marco-foto"> <!--marco para que las fotos no se deformen-->
+                        <img src="foto1.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Manifestación 1990</p></div>
+                </div>
+                <div class="fotos">
+                    <div class="marco-foto">
+                        <img src="img/foto2.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Archivo Histórico</p></div>
+                </div>
+                <div class="fotos">
+                    <div class="marco-foto">
+                        <img src="img/foto3.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Frontera</p></div>
+                </div>
+                <div class="fotos">
+                    <div class="marco-foto">
+                        <img src="img/foto4.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Vida Cotidiana</p></div>
+                </div>
+                <div class="fotos">
+                    <div class="marco-foto">
+                        <img src="img/foto5.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Esperanza</p></div>
+                </div>
+                 <div class="fotos">
+                    <div class="marco-foto">
+                        <img src="img/foto6.jpg" class="foto-tarjeta">
+                    </div>
+                    <div class="texto-tarjeta"><p>Documento Oficial</p></div>
+                </div>
+
+            </div>
+
+            <img class="flecha-btn" onclick="moverDerecha()" onmouseover="flecha_hover(this)" onmouseout="flecha_normal(this)" src="img_galeria/boton-de-flecha.png">
+        </div>
+    </section>
+
+    <section class="seccion-recomendados">
+        <h2>RECOMENDADOS</h2>
+        
+        <div class="video-recomendado">
+            
+            <div class="video-contenedor">
+
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    src="https://www.youtube.com/embed/kIx07_jugJA" 
+                    title="Video Explicativo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p class="video-titulo">¿Cómo entender el conflicto Israel–Palestina?</p>
+            <p class="video-descripcion">Una visión profunda sobre los orígenes y la evolución histórica.</p>
+        </div>
+    </section>
+    <section class="seccion-biblioteca">
+    <h2>BIBLIOTECA</h2>
+    
+    <div class="grid-libros">
+        
+        <div class="libro">
+            <div class="portada-contenedor">
+               <a href="https://play.google.com/store/books/details/Mario_Vargas_Llosa_Israel_Palestina_Paz_o_Guerra_S?id=oOHiCwAAQBAJ" target="_blank">
+                    <img src="img_galeria/libro1.jpeg" class="img-libro">
+                </a>
+            </div>
+            <div class="info-libro">
+                <h3>Israel / Palestina: Paz o Guerra Santa</h3>
+                <p class="autor">Mario Vargas Llosa</p>
             </div>
         </div>
 
-        <div class="fotos">
-            <img src="" alt="Descripción" class="foto-tarjeta">
-            <div class="texto-tarjeta">
-                <p>Lorem ipsum</p>
+        <div class="libro">
+            <div class="portada-contenedor">
+                <a href="https://books.google.es/books/about/Palestina_nueva_edici%C3%B3n.html?id=tONjDQAAQBAJ&redir_esc=y" target="_blank">
+                    <img src="img_galeria/libro2.jpg" class="img-libro">
+                </a>
+            </div>
+            <div class="info-libro">
+                <h3>Palestina</h3>
+                <p class="autor">Joe Sacco</p>
             </div>
         </div>
 
-        <div class="fotos">
-            <img src="img/foto3.jpg" alt="Descripción" class="foto-tarjeta">
-            <div class="texto-tarjeta">
-                <p>Lorem ipsum</p>
+        <div class="libro">
+            <div class="portada-contenedor">
+                <a href="https://books.google.es/books/about/La_limpieza_%C3%A9tnica_de_Palestina.html?hl=es&id=LRNpTOJN-UcC&redir_esc=y" target="_blank">
+                    <img src="img_galeria/libro3.jpg" class="img-libro">
+                </a>
+            </div>
+            <div class="info-libro">
+                <h3>La limpieza étnica</h3>
+                <p class="autor">Ilan Pappé</p>
             </div>
         </div>
 
-        <div class="fotos">
-            <img src="img/foto4.jpg" alt="Descripción" class="foto-tarjeta">
-            <div class="texto-tarjeta">
-                <p>Lorem ipsum</p>
+        <div class="libro">
+            <div class="portada-contenedor">
+                <a href="https://books.google.es/books/about/Israel_y_Palestina_Anatom%C3%ADa_de_un_confl.html?id=wsaGEQAAQBAJ&redir_esc=y" target="_blank">
+                    <img src="img_galeria/libro4.jpg" class="img-libro">
+                </a>
+            </div>
+            <div class="info-libro">
+                <h3>Israel y Palestina. Anatomía de un conflicto</h3>
+                <p class="autor">Thomas Snégaroff, Vincent Lemire</p>
             </div>
         </div>
 
     </div>
 </section>
+
+    <footer>
+        <p>&copy; 2025 Museo de la Memoria - Proyecto TecWeb</p>
+    </footer>
+
+    <script>
+        //carrusel
+        const contenedorFotos = document.getElementById('galeria');
+
+        function moverDerecha() {
+            contenedorFotos.scrollLeft += 300;
+        }
+
+        function moverIzquierda() {
+            contenedorFotos.scrollLeft -= 300;
+        }
+
+        function flecha_hover(elemento) {
+            elemento.src = "img_galeria/boton-de-flecha2.png"; 
+        }
+
+        function flecha_normal(elemento) {
+            elemento.src = "img_galeria/boton-de-flecha.png";
+        }
+
+    </script>
+
 </body>
+</html>
