@@ -15,7 +15,7 @@ html {
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            background-image: url("fotocentro.jpeg");
+            background-image: url("imagenes/fotocentro.jpeg");
             background-size: cover;       /* Hace que la foto cubra todo el espacio */
             background-position: center;
         }
