@@ -2,10 +2,6 @@ html {
             scroll-behavior: smooth;
         }
 
-        body {
-            text-align: center;
-        }
-
         /* Sección Cabecera */
         #cabecera {
             background-color: #666;
@@ -34,6 +30,7 @@ html {
 
         /* Sección Galería */
         #centro {
+            text-align: center;
             padding: 80px 20px;
         }
 
