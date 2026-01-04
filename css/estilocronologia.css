@@ -2,18 +2,16 @@
 
 @font-face {
     font-family: 'NOW';        
-    src: url('../Now-Bold.otf'); /* Asegúrate de que la ruta sea correcta */
+    src: url('../Now-Bold.otf'); 
 }
 
-/* 1. RESTAURAR SCROLL (Quitar overflow hidden) */
 html, body {
     margin: 0;
     padding: 0;
+
     font-family: 'Noto Sans', sans-serif; 
     background-color: #fffdf6; 
     color: #231f20;
-    /* Eliminamos height: 100% y overflow: hidden para permitir scroll */
-    min-height: 100vh; 
 }
 
 h1, h2, h3 {
@@ -21,57 +19,46 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-/* HEADER (Igual que en cabecera.css, pero aseguramos compatibilidad) */
 header {
     background-color: #fffdf6;
     border-bottom: 2px solid #231f20; 
     padding: 15px 40px;
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
 }
 
-/* BANNER */
 .banner {
     text-align: center;
-    padding: 40px 20px; /* Más espacio vertical */
-    position: relative; 
-    overflow: hidden;
+    padding: 20px;
     color: #231f20;
-    background-color: #fffdf6;
 }
 
 .banner h1 {
-    font-size: 48px;
+    font-size: 42px;
     margin: 0;
-    color: #556b2f; /* Color verdoso de tu imagen de referencia */
+    color: #231f20;
 }
 
-/* 2. CUERPO DE PÁGINA (AQUÍ HACEMOS LOS ESPACIOS LATERALES) */
 .cuerpo-pagina {
-    /* Al poner 80%, dejas un 10% de espacio vacío a cada lado */
-    width: 80%; 
-    max-width: 1400px; /* Tope máximo para pantallas gigantes */
-    margin: 40px auto; /* Centrado con margen arriba/abajo */
-    display: block; /* Quitamos flex aquí para que el footer baje naturalmente */
+    width: 95%; 
+    max-width: 1800px; 
+    margin: 0 auto 40px auto; 
 }
 
-/* CONTENEDOR FLEXIBLE DE 4 COLUMNAS */
 .contenedor-visual-mapa {
     display: flex;
     justify-content: center; 
-    align-items: flex-start; /* Alineamos arriba para que el texto pueda crecer */
-    gap: 30px; 
+    align-items: flex-start; 
+    gap: 40px; 
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
-/* 1. LEYENDA */
+/* leyenda de mapa */
 .columna-leyenda {
-    width: 120px; 
+    width: 150px; 
+    flex-shrink: 0; 
     display: flex;
     justify-content: flex-end;
-    margin-top: 150px; /* Bajamos un poco la leyenda para centrarla visualmente con el mapa */
+    margin-top: 100px; 
 }
 
 .columna-leyenda img {
@@ -79,29 +66,22 @@ header {
     height: auto;
 }
 
-/* 2. MAPA */
+/* mapa */
 .marco-foto-mapa {
-    /* Altura fija para que el mapa siempre tenga el mismo tamaño */
     height: 600px; 
-    width: auto; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* El borde y la sombra van a la imagen, no al div */
+    width: 450px;
+    border: 3px solid #231f20; 
+    box-shadow: 8px 8px 0px rgba(35, 31, 32, 0.15); 
 }
 
 .marco-foto-mapa img {
-    height: 100%; 
-    width: auto; 
+    max-height: 100%; 
+    max-width: 100%; 
     object-fit: contain; 
-    display: block;
-    border: 3px solid #231f20; 
-    box-shadow: 8px 8px 0px rgba(35, 31, 32, 0.15); 
     transition: opacity 0.2s ease;
 }
 
-/* 3. BOTONES */
+/* botones */
 .controles-tiempo-vertical {
     position: relative;
     display: flex;
@@ -109,9 +89,9 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 80px; 
-    height: 600px; /* Misma altura que el mapa */
-    padding: 20px 0;
-    box-sizing: border-box;
+    height: 600px; 
+    padding: 15px 0;
+    flex-shrink: 0;
 }
 
 .linea-guia-vertical {
@@ -129,53 +109,45 @@ header {
     width: 65px;
     height: 65px;
     border-radius: 50%;
+    z-index: 1;
+
     background-color: #fffdf6;
     border: 3px solid #231f20; 
-    z-index: 1;
-    cursor: pointer;
     font-family: 'Libre Baskerville', serif;
-    font-weight: 700;
-    font-size: 14px;
     color: #231f20;
+    cursor: pointer;
+
     box-shadow: 3px 3px 0px rgba(35,31,32,1); 
     transition: all 0.2s ease;
-    margin: 10px 0;
 }
 
-.bolita-anio:hover {
-    background-color: #f5d246; 
+
+.bolita-anio:hover,
+.bolita-anio.activa {
+    background-color: #fe5929; 
     transform: translateY(-3px);
     box-shadow: 5px 5px 0px rgba(35,31,32,1);
-}
-
-.bolita-anio.activa {
-    background-color: #fe5929;
     color: #fff;
-    transform: scale(1.15);
     border-color: #231f20;
-    box-shadow: 5px 5px 0px rgba(35,31,32,1);
 }
 
-/* 4. TEXTO EXPLICATIVO */
+/* texto de timeline */
 .columna-texto {
-    flex: 1; /* Ocupa el espacio restante a la derecha */
-    min-width: 300px; /* Ancho mínimo para que se lea bien */
+    flex: 1; 
+    min-width: 300px; 
 }
 
 .tarjeta-explicacion {
     border: 2px solid #231f20;
     background-color: #fffdf6;
-    padding: 0; 
-    display: flex;
     box-shadow: 6px 6px 0px rgba(35, 31, 32, 0.1); 
-    position: relative;
+    width: 100%;
 }
 
-/* Decoración lateral negra */
 .cuadro-negro-decorativo {
-    width: 20px;
+    height: 20px;
+    width: 100%;
     background-color: #231f20;
-    flex-shrink: 0;
 }
 
 .texto-interior {
@@ -184,7 +156,7 @@ header {
 
 .tarjeta-explicacion h2 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: underline;
     text-decoration-color: #fe5929; 
     text-underline-offset: 5px;
@@ -192,9 +164,8 @@ header {
 }
 
 .tarjeta-explicacion p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
-    color: #333;
 }
 
 footer {
@@ -202,7 +173,6 @@ footer {
     padding: 40px;
     font-size: 14px;
     border-top: 1px solid #ddd; 
-    margin-top: 80px;
+    margin-top: 60px;
     color: #666;
-    background-color: #fffdf6;
 }
