@@ -1,14 +1,10 @@
 /* ESTILOS  */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
 
-.seccion-recomendados {
-    margin-top: 40px;
-    padding: 0 20px;
-}
 
-h1, h2, h3{
+h1,h2, h3{
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 25px;                    
     font-size: 30px;
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
@@ -87,6 +83,11 @@ transform: translateY(-5px);
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* VIDEO */
+
+.seccion-recomendados {
+    margin-top: 40px;
+    padding: 0 20px;
+}
 
 .video-recomendado {
     background-color: #f4f4f4;
@@ -173,6 +174,12 @@ transform: translateY(-5px);
     color: #555;
     font-style: italic;
 }
-footer{
+/*FOOTER*/
+footer {
     text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    border-top: 1px solid #ddd; 
+    margin-top: 80px;
+    color: #666;
 }
