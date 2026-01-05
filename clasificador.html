@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clasificador - Museo de la Memoria</title>
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/clasificador.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="caja-logo">
+            <img src="cabecera/LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
+            <div class="nombre-museo">
+                Museo de<br>
+                la Memoria
+            </div>
+        </div>
+        
+        <nav class="menu-navegacion">
+            <a href="index.html">Home</a>
+            <a href="cronologia.html">Cronología</a>
+            <a href="galeria.html" class="activo">Galería</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="clasificador.html">Clasificador</a>
+            <a href="formulario.html" class="btn-socio">Hazte socio</a>
+        </nav>
+    </header>
+
+    <div class="titulo-subtitulo">
+            <h1>ORGANIZA LA MEMORIA</h1>
+            <p>Arrastra las fotos a su época correcta</p>
+    </div>
+
+    <section class="todas-fotos" id="origen">
+
+        <img src="imagenes/img_clasificador/foto1_pasado.jpg" class="foto" id="foto1" data-epoca="pasado" draggable="true" alt="foto pasado">
+        <img src="imagenes/img_clasificador/foto1_presente.jpg" class="foto" id="foto2" data-epoca="presente" draggable="true" alt="foto presente">
+        <img src="imagenes/img_clasificador/foto3_presente.jpg" class="foto" id="foto3" data-epoca="presente" draggable="true" alt="foto presente">
+        <img src="imagenes/img_clasificador/foto3_pasado.jpg" class="foto" id="foto4" data-epoca="pasado" draggable="true" alt="foto pasado">
+        <img src="imagenes/img_clasificador/foto2_presente.jpg" class="foto" id="foto5" data-epoca="presente" draggable="true" alt="foto presente">
+        <img src="imagenes/img_clasificador/foto2_pasado.jpg" class="foto" id="foto6"  data-epoca="pasado" draggable="true" alt="foto pasado">
+
+    </section>
+
+    <section class="cajas-presente-pasado" id="destino">
+
+        <div class="caja-drop" id="presente" data-target="presente">
+            <h2>PRESENTE</h2>
+        </div>
+        <div class= "caja-drop" id="pasado" data-target="pasado">
+            <h2>PASADO</h2>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Museo de la Memoria - Proyecto Educativo</p>
+    </footer>
+    <script src="javascript/clasificador_drag-drop.js"></script>
+
+
+    
+</body>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+
+/*TITULOS*/
+h1, h2, h3{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+.titulo-subtitulo h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+   
+}
+
+.titulo-subtitulo p{
+    text-align: center; 
+    font-family: 'Libre Baskerville', serif; 
+    color: #666;
+    font-size: 20px;
+}
+/* FOTOS */
+
+.todas-fotos {
+    display: flex;
+    padding: 10px;
+    overflow: auto; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+.foto {
+    width: 180px;
+    height: 120px;
+    object-fit: cover; /*explicacion en el informe pero recorta la imagen para que quepa bien en el contenedor*/
+    background-color: #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border: 5px solid white; /* marco tipo foto */
+    transition: transform 0.2s, border-color 0.3s;
+    cursor: grab; /* explicacion en informe pone cursor con una mano listo para agarrar*/
+    
+
+}
+
+/* ROTACION EN LAS FOTOS PARA DAR EFECTO DESORDENADO*/
+#foto1 { 
+    transform: rotate(5deg); 
+}
+
+#foto2 { 
+    transform: rotate(-3deg); 
+}
+
+#foto3 { 
+    transform: rotate(4deg); 
+}
+
+#foto4 { 
+    transform: rotate(-2deg); 
+}
+
+#foto5 { 
+    transform: rotate(3deg); 
+}
+
+#foto6 { 
+    transform: rotate(-4deg); 
+}
+
+/* CAJAS PRESENTE PASADO*/
+
+.cajas-presente-pasado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+.caja-drop{
+    width: 700px;
+    height:550px;
+    border: 2px dashed;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    border-radius: 4px;
+}
+
+.caja-drop.drag-over { /*cuando arrastras algo encima cambia de color la caja*/
+    background-color: #d1d1d1;
+    border-color: #333;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    border-top: 1px solid #ddd; 
+    margin-top: 80px;
+    color: #666;
+}
