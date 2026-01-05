@@ -1,10 +1,6 @@
 /*ESTILO FORMULARIO*/
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
 
-        .seccion-recomendados {
-            margin-top: 40px;
-            padding: 0 20px;
-        }
 
         h1, h3{
             text-align: center;
@@ -14,22 +10,43 @@
             font-weight: 700;
         }
 
-/*Así colocamos el  el texto a la izquierda y el form a la derecha */
+/*Así colocamos el  el texto a la izquierda y el form a la derecha */ 
         .contenedor-principal {
             display: flex;
             justify-content: space-around; 
             align-items: center;           
-            min-height: 70vh;              /*altura para que respire la página*/
-            padding: 20px;
-            font-family: Arial, sans-serif;
+            min-height: 80vh;              /*altura para que respire la página*/
+            padding: 40px;
+            background-image: url("../imagenes/img_formulario/fondo.jpeg"); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-/* Estilo de la frase de la izquierda */
-        .titulo-izquierda {
+/* Agrupación de texto a la izquierda */
+        .columna-texto {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            max-width: 450px;
+        }
+
+/* Estilo de "TU VOZ CUENTA" */
+        .titulo {
             font-size: 60px;
-            max-width: 400px;
+            color: #fffdf6;
             line-height: 1.1;
             font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+/* Estilo para el párrafo de debajo*/
+        .subtitulo {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fffdf6;
+            text-align: center;
         }
 
 /* El recuadro del formulario */
