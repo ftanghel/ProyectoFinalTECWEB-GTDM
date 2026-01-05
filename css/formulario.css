@@ -1,3 +1,19 @@
+/*ESTILO FORMULARIO*/
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
+
+        .seccion-recomendados {
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        h1, h3{
+            text-align: center;
+            margin-bottom: 25px;                    
+            font-size: 30px;
+            font-family: 'Libre Baskerville', serif;
+            font-weight: 700;
+        }
+
 /*Así colocamos el  el texto a la izquierda y el form a la derecha */
         .contenedor-principal {
             display: flex;
