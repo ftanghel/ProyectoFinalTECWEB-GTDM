@@ -164,28 +164,6 @@
     <footer>
         <p>&copy; 2025 Museo de la Memoria - Proyecto TecWeb</p>
     </footer>
-
-    <script>
-        //carrusel
-        const contenedorFotos = document.getElementById('galeria');
-
-        function moverDerecha() {
-            contenedorFotos.scrollLeft += 300;
-        }
-
-        function moverIzquierda() {
-            contenedorFotos.scrollLeft -= 300;
-        }
-
-        function flecha_hover(elemento) {
-            elemento.src = "imagenes/img_galeria/boton-de-flecha2.png"; 
-        }
-
-        function flecha_normal(elemento) {
-            elemento.src = "imagenes/img_galeria/boton-de-flecha.png";
-        }
-
-    </script>
-
+    <script src="javascript/galeria.js"></script>
 </body>
 </html>
