@@ -14,22 +14,22 @@ const datosHistoria = {
     },
     '1948': {
         titulo: "1948: Se forma Israel",
-        texto: "Tras la guerra de 1948, Israel ocupó el 78% del territorio histórico de Palestina, expulsando a 700.000 palestinos.",
+        texto: "La proclamación del Estado de Israel en 1948 convirtió la resolución de partición en un hecho consumado, pero también desencadenó una guerra regional inmediata. La intervención de los Estados árabes vecinos transformó el conflicto civil en una guerra interestatal, en la que el resultado no lo determinaron los acuerdos internacionales, sino la capacidad militar sobre el terreno. Los armisticios de 1949 consolidaron una nueva realidad territorial: Israel amplió su control hasta cerca del 77–78 % de la Palestina histórica, superando ampliamente el reparto aprobado por la ONU. Al mismo tiempo, la expulsión y huida de más de 700 000 palestinos —la Nakba— fragmentó definitivamente a la sociedad palestina y convirtió el conflicto en un problema de refugiados sin Estado, sentando las bases de una confrontación prolongada.",
         img: "imagenes/img_cronologia/palestina-03.png",
         leyenda: "imagenes/img_cronologia/leyenda-08.png"
     },
     '1967': {
         titulo: "1967: La Ocupación",
-        texto: "En la Guerra de los Seis Días, Israel ocupó Cisjordania, Gaza y Jerusalén Este. Comienza la política de asentamientos.",
+        texto: "La Guerra de los Seis Días marcó un punto de inflexión decisivo en el conflicto árabe-israelí al transformar una disputa entre Estados en un régimen de ocupación prolongada. La victoria militar israelí permitió la captura del Sinaí, los Altos del Golán, Gaza y Cisjordania, incluida Jerusalén Este, alterando radicalmente el equilibrio territorial y estratégico de la región. Aunque Israel no anexó formalmente Cisjordania en ese momento, el inicio de su ocupación redefinió la cuestión palestina: el conflicto dejó de centrarse en las fronteras de 1948 y pasó a girar en torno a la ocupación, los asentamientos y la autodeterminación. La Resolución 242 de la ONU intentó traducir el resultado militar en un marco diplomático, pero, una vez más, la realidad creada por la guerra se impuso sobre las ambigüedades del derecho internacional.",
         img: "imagenes/img_cronologia/palestina-04.png",
         leyenda: "imagenes/img_cronologia/leyenda-09.png" 
     },
     'Presente': {
-        titulo: "Actualidad: Fragmentación",
-        texto: "El territorio palestino es hoy un archipiélago de zonas aisladas por muros y controles militares.",
+        titulo: "2012–Actualidad: Fragmentación y consolidación",
+        texto: "Desde 2012, la cuestión palestina entra en una fase de estancamiento territorial en la que no se producen ni retiradas ni redefiniciones formales de fronteras, sino la consolidación de una ocupación fragmentada. Cisjordania permanece dividida en un mosaico de enclaves palestinos separados por asentamientos, carreteras y controles israelíes, mientras Gaza queda aislada física y políticamente del resto del territorio. La ausencia de un proceso político efectivo ha transformado la ocupación en una condición estructural y normalizada, fijando un mapa de facto en el que el control territorial se impone sin resolución final, y donde la posibilidad de un Estado palestino continuo se diluye progresivamente.",
         img: "imagenes/img_cronologia/palestina-05.png",
         leyenda: "imagenes/img_cronologia/leyenda-09.png"
-    }
+}
 };
 
 function cambiarEra(anio, botonClickeado) {

@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Museo de la Memoria</title>
+    <!-- css añadido en archivos separados -->
+    <!-- cabecera.css -> general para todas, estiloindex.css -> especial para index.html -->
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/estiloindex.css">
 </head>
+
 <body>
     
     <header>
+        <!-- barra para navegar - uso común en todas las páginas para mover entre todas -->
         <div class="caja-logo">
-            <img src="cabecera/LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
+            <img src="cabecera/LOGOMUSEOMEMORIA_INV.png" class="logo-foto">
             <div class="nombre-museo">
                 Museo de<br>
                 la Memoria
             </div>
         </div>
         
+        <!-- activo -> página actual | botón socio -> estilo diferente al resto -->
         <nav class="menu-navegacion">
             <a href="index.html" class="activo">Home</a>
             <a href="cronologia.html">Cronología</a>
@@ -28,54 +35,101 @@
         </nav>
     </header>
 
+        <!-- banner decorativo para la parte superior. div vacio para hacer efecto "bandera palestina" -->
     <section class="banner">
         <div class="triangulo-adorno"></div>
-
         <h1>Museo de la Memoria</h1>
         <p>
             Un espacio dedicado a preservar y compartir la memoria de Palestina.
         </p>
     </section>
 
+    <!-- contenido principal de la página: iniciado por main -->
     <main class="cuerpo-pagina">
         
-        <div class="bloque-ods">
-            <div class="mitad-texto">
-                <h2>Objetivos de Desarrollo Sostenible</h2>
-                <p>Conozca los ODS que promueven la paz y la igualdad.</p>
+        <!-- agrupaciones por div, para poder manejar el css -->
+        <div class="bloque-introduccion">
+            <div class="texto-intro">
+                <h2 class="titulo">Bienvenidos/as</h2>
+                <p>Este es un archivo digital vivo diseñado para <span class="resaltar">visibilizar la historia y dar voz a los protagonistas</span>. Nuestro objetivo es generar conciencia social a través de una experiencia inmersiva que conecta el pasado con el presente.</p>
+                <p>Explora nuestros archivos audiovisuales y testimonios para <span class="resaltar">entender la profundidad del conflicto</span>.</p>
             </div>
-            <div class="marco-simple"></div> 
+            <!-- vídeo + texto introductorio para el home - objetivos principales, explicación de la página, primer acercamiento con la situación -->
+            <!-- una vez hosteado se ve el vídeo, sino usar "Live Server" -->
+            <div class="video-intro">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/freEDtISvZw?si=nquqZTXN1y8GxtEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
 
-        <div class="mis-tarjetas">
-            
-            <div class="tarjeta-individual">
-                <div class="cuadro-negro"></div>
-                <div class="info-tarjeta">
-                    <h3>ODS 16</h3>
-                    <h4>Paz, Justicia e Instituciones Sólidas</h4>
-                    <p>Abogamos por sociedades pacíficas.</p>
-                    <div class="etiquetas">
-                        <span>Justicia</span><span>Paz</span>
+        <!-- sección para mencionar los ODS por el proyecto -->
+     
+        <div class="seccion-ods">
+
+            <h2>Nuestros Objetivos</h2>
+
+            <div class="mis-tarjetas">
+                <div class="tarjeta-individual">
+                    <!-- ODS 16 -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Sustainable_Development_Goal-es-02.jpg/1200px-Sustainable_Development_Goal-es-02.jpg" class="imagen-ods">
+                    <div class="info-tarjeta">
+
+                        <h3>ODS 16</h3>
+                        <h4>Paz, Justicia e Instituciones Sólidas</h4>
+                        <p>Abogamos por sociedades pacíficas.</p>
+
+                    </div>
+                </div>
+
+                <div class="tarjeta-individual">
+                    <!-- ODS 10 -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Sustainable_Development_Goal-es-08.jpg" class="imagen-ods">
+                    <div class="info-tarjeta">
+
+                        <h3>ODS 10</h3>
+                        <h4>Reducción de las Desigualdades</h4>
+                        <p>Trabajamos por la equidad social.</p>
+
                     </div>
                 </div>
             </div>
 
-            <div class="tarjeta-individual">
-                <div class="cuadro-negro"></div>
-                <div class="info-tarjeta">
-                    <h3>ODS 10</h3>
-                    <h4>Reducción de las Desigualdades</h4>
-                    <p>Trabajamos por la equidad social.</p>
-                    <div class="etiquetas">
-                        <span>Inequidad</span><span>Igualdad</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <!-- recuadro con botón que lleva hacia página con más info - ONU -->
+        <a href="https://www.un.org/unispal/es/data-collection/" target="_blank" class="barra-onu-enlace">
+            <div class="barra-onu">
+                <div class="texto-onu">
+                    <h3>SISTEMA DE INFORMACIÓN DE NACIONES UNIDAS SOBRE PALESTINA</h3>
+                    <p>El repositorio de documentos en línea más grande del mundo sobre la cuestión de Palestina</p>
+                </div>
+                <div class="boton-buscar">BUSCAR</div>
+            </div>
+        </a>
+
+        <!-- sección con enlaces a las otras páginas principales del proyecto -->
+        <div class="seccion-tres-enlaces">
+            <article class="tarjeta-enlace" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/img_index/pal1.png');">
+                <h3>Galería Multimedia</h3>
+                <p>Explora imágenes históricas y vídeos documentales.</p>
+                <a href="galeria.html" class="boton-ver">Ver Galería</a>
+            </article>
+
+            <article class="tarjeta-enlace" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/img_index/pal2.png');">
+                <h3>Cronología Histórica</h3>
+                <p>Navega a través de la línea temporal de los sucesos.</p>
+                <a href="cronologia.html" class="boton-ver">Ver Cronología</a>
+            </article>
+
+            <article class="tarjeta-enlace" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/img_index/pal3.png');">
+                <h3>Voces y Testimonios</h3>
+                <p>Escucha las historias reales de los afectados.</p>
+                <a href="testimonios.html" class="boton-ver">Leer Testimonios</a>
+            </article>
+        </div>
+
     </main>
-
+    <!-- pié de página - igual en todas -->
     <footer><p>&copy; 2025 Museo de la Memoria - Proyecto TecWeb</p></footer>
+
 </body>
 </html>

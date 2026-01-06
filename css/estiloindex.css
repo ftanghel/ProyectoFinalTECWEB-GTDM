@@ -1,18 +1,27 @@
-/* ESTILOS  */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
-
 
 h1, h2, h3 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 700;
 }
 
-/* BANNER */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* centrar todo el contenido principal */
+.cuerpo-pagina {
+    width: 80%;
+    margin: 60px auto; 
+}
+
+/* banner principal */
 .banner {
     background-color: #231f20;
     text-align: center;
     padding: 90px 20px;
-
     position: relative; 
     overflow: hidden;
 }
@@ -25,12 +34,9 @@ h1, h2, h3 {
 
 .banner p {
     font-size: 18px;
-    font-weight: 400;
-    color:white;
+    color: white;
 }
 
-
-/* triangulo aaaaahhhh */
 .triangulo-adorno {
     position: absolute;
     top: 0;
@@ -41,56 +47,59 @@ h1, h2, h3 {
     clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-/* CUERPO*/
-.cuerpo-pagina {
-    width: 80%;
-    margin: 60px auto; 
-}
+/* intro (texto + vídeos) */
 
-.bloque-ods {
+.bloque-introduccion {
     display: flex;
-    gap: 50px;
-    margin-bottom: 60px;
+    gap: 40px;
     align-items: center;
+    margin-bottom: 80px;
 }
 
-.mitad-texto {
+.texto-intro {
     width: 50%;
 }
 
-.bloque-ods h2 {
-    font-size: 36px;
-    margin-top: 0;
+.video-intro {
+    width: 50%;
 }
 
+.titulo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fe5929;
+}
 
-.marco-simple {
-    width: 50%;
-    height: 250px;
-    background-color: #fffdf6; 
-    border: 2px solid #231f20;
+.resaltar {
+    font-weight: bold;
+    color: #fe5929;
+}
+
+/* cuadros ODS */
+
+.seccion-ods {
+    margin-bottom: 60px;
 }
 
 .mis-tarjetas {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .tarjeta-individual {
+    display: flex;
     flex: 1;
     border: 1px solid #231f20;
-    padding: 25px;
-    display: flex;
+    padding: 20px;
     gap: 20px;
     background-color: #fffdf6;
-    box-shadow: 6px 6px 0px rgba(35, 31, 32, 0.1); /* Sombrita */
+    align-items: center;
 }
 
-.cuadro-negro {
+.imagen-ods {
     width: 100px;
     height: 100px;
-    background-color: #231f20;
-    flex-shrink: 0;
+    object-fit: contain;   
 }
 
 .info-tarjeta h3 {
@@ -102,22 +111,95 @@ h1, h2, h3 {
 }
 
 .info-tarjeta h4 {
-    margin: 10px 0;
     font-size: 14px;
     color: #555;
     font-weight: normal;
 }
 
+/* barra hacia página ONU */
 
-.etiquetas span {
-    background-color: #231f20;
-    color: #fffdf6;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-right: 5px;
+.barra-onu-enlace {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.barra-onu {
+    border: 5px solid #87a211;
+    background-color: #f7f9f0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-onu h3 {
+    color: #5e700b;
+    margin: 0;
+    font-size: 24px;
+}
+
+.texto-onu p {
+    color: #000;
+    margin: 10px 0;
     font-weight: bold;
 }
+
+.boton-buscar {
+    background-color: #87a211;
+    color: white;
+    padding: 10px 35px;
+    font-weight: bold;
+}
+
+/* tarjetas para ir a otras partes de la web (galería, cronologia y testimonios) */
+
+.seccion-tres-enlaces {
+    display: flex;
+    gap: 15px;
+}
+
+.tarjeta-enlace {
+    width: 33%;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    border: 1px solid #231f20;
+}
+
+.tarjeta-enlace h3 {
+    margin: 0 0 15px 0;
+    color: #f5d246;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.tarjeta-enlace p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-weight: bold;
+}
+
+.boton-ver {
+    background-color: white;
+    color: #231f20;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #231f20;
+}
+
+.boton-ver:hover {
+    background-color: #f5d246;
+}
+
+/* pie de página */
 
 footer {
     text-align: center;
