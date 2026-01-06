@@ -26,135 +26,56 @@
         </nav>
     </header>
 
-    <div class="contenedor-principal">
-        <div class="columna-texto">
-            <h1 class="titulo">TU VOZ CUENTA</h1>
-            <p class="subtitulo">
-                La población de Gaza enfrenta una realidad devastadora. 
-                Gaza sigue en ruinas: el 90% de la población ha sido desplazada,
-                miles viven entre los escombros, sufren hambruna y carecen de lo 
-                más básico tras la destrucción de sus hogares. Con tu ayuda, podremos 
-                seguir llevando alimentos, agua y medicinas a quienes más lo necesitan. 
-                Por favor, ayuda ahora. No vamos a dejarles solos. Pase lo que pase. 
-            </p>
-        </div>
-        <form id="formulario" action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
-        <h3>DONA</h3>
-        <div class="campo">
-            <label for="nombreCompleto">Nombre completo</label><br>
-            <input type="text" id="nombreCompleto" name="nombre"><br><br>
-        </div>
-        <div class="campo">
-            <label for="correo">Correo electrónico</label><br>
-            <input type="email" id="correo" name="correo"><br><br>
-        </div>
-        <div id="otra" class="campo">
-            <label for="cant">Cantidad a donar</label><br>
-            <div class="botones">
-                <button type="button"  onclick="gestionar(this)">60€</button>
-                <button type="button"  onclick="gestionar(this)">80€</button>
-                <button type="button"  onclick="gestionar(this)">120€</button>
-                <button type="button"  onclick="gestionar(this); mostrar()">OTRA</button>
+    <main>
+        <div class="contenedor-principal">
+            <div class="columna-texto">
+                <h1 class="titulo">TU VOZ CUENTA</h1>
+                <p class="subtitulo">
+                    La población de Gaza enfrenta una realidad devastadora. 
+                    Gaza sigue en ruinas: el 90% de la población ha sido desplazada,
+                    miles viven entre los escombros, sufren hambruna y carecen de lo 
+                    más básico tras la destrucción de sus hogares. Con tu ayuda, podremos 
+                    seguir llevando alimentos, agua y medicinas a quienes más lo necesitan. 
+                    Por favor, ayuda ahora. No vamos a dejarles solos. Pase lo que pase. 
+                </p>
+            </div>
+            <form id="formulario" action="vpernog@upv.edu.es" method="post" onsubmit="validar(event)">
+            <h3>DONA</h3>
+            <div class="campo">
+                <label for="nombreCompleto">Nombre completo</label><br>
+                <input type="text" id="nombreCompleto" name="nombre"><br><br>
+            </div>
+            <div class="campo">
+                <label for="correo">Correo electrónico</label><br>
+                <input type="email" id="correo" name="correo"><br><br>
+            </div>
+            <div id="otra" class="campo">
+                <label for="cant">Cantidad a donar</label><br>
+                <div class="botones">
+                    <button type="button"  onclick="gestionar(this)">60€</button>
+                    <button type="button"  onclick="gestionar(this)">80€</button>
+                    <button type="button"  onclick="gestionar(this)">120€</button>
+                    <button type="button"  onclick="gestionar(this); mostrar()">OTRA</button>
+                </div><br>
             </div><br>
-        </div><br>
-        <div class="campo opciones-check">
-            <input type="checkbox" id="bot1">
-            <label for="bot1">Acepto la política de privacidad</label><br>
-            <input type="checkbox" id="bot2">
-            <label for="bot2">Deseo recibir un correo con la confirmación de la donación</label><br><br>
+            <div class="campo opciones-check">
+                <input type="checkbox" id="bot1">
+                <label for="bot1">Acepto la política de privacidad</label><br>
+                <input type="checkbox" id="bot2">
+                <label for="bot2">Deseo recibir un correo con la confirmación de la donación</label><br><br>
+            </div>
+
+            <input type="submit" class="boton-enviar" value="DONAR"><br><br>
+            <div id="mensajes"></div>
+            </form>
         </div>
+    </main>
 
-        <input type="submit" class="boton-enviar" value="DONAR"><br><br>
-        <div id="mensajes"></div>
-        </form>
-    </div>
-    
-    <script>
-        function gestionar(elem){
-            var dinero=document.getElementById("dinero");
-            if (dinero){
-                dinero.remove();
-            }
-            var botones = document.querySelectorAll('.botones button');
-            for (var i=0;i<botones.length;i++){
-                botones[i].style.backgroundColor = "";
-                botones[i].style.color = "";
-            }
-            elem.style.backgroundColor = "#fe5929";
-            elem.style.color = "white";
-        }
-        function mostrar(){
-            var div=document.getElementById("otra");
-            var input=document.createElement("input");
-            input.type="number";
-            input.id="dinero";
-            input.min=1;
-            input.step=1;
-            div.appendChild(input);
-        }
-        function validar(event){
-            event.preventDefault();
-
-            var c_nombre=document.getElementById("nombreCompleto");
-            var c_correo=document.getElementById("correo");
-            var c_mensajes=document.getElementById("mensajes");
-            var caja1=document.getElementById("bot1");
-
-            c_mensajes.innerHTML="";
-            c_nombre.style.border="";
-            c_correo.style.border="";
-
-            var boton = document.querySelector(".botones button[style*='background-color']");
-            var errores = [];
-
-            if (c_nombre.value===""){
-                errores.push("Debes escribir tu nombre completo.");
-                c_nombre.style.border="2px solid #fe5929";
-            }
-            if (c_correo.value===""){
-                errores.push("Debes escribir tu correo electrónico.");
-                c_correo.style.border="2px solid #fe5929";
-            }
-            if (!boton){
-                errores.push("Debes seleccionar una cantidad de dinero.");
-            } else {
-                if (boton.textContent==="OTRA") {
-                    var c_dinero = document.getElementById("dinero");
-                    if (c_dinero.value===""){
-                        errores.push("Debes introducir una cantidad de dinero.");
-                        c_dinero.style.border="2px solid #fe5929";
-                    }else{
-                        c_dinero.style.border="";
-                    }
-                }
-            }
-            if (!caja1.checked){
-                errores.push("Debes aceptar la política de privacidad.");
-            }
-            if (errores.length>0){
-                for (var i=0;i<errores.length;i++){
-                    c_mensajes.innerHTML+=errores[i]+"<br>";
-                }
-                c_mensajes.style.color="#fe5929";
-                c_mensajes.style.fontWeight="bold";
-                return false;
-            }else{
-                alert("Donación realizada correctamente. ¡Gracias por ayudar!");
-                document.getElementById("formulario").reset();
-                if (c_dinero){
-                    c_dinero.remove();
-                }
-                boton.style.backgroundColor="";
-                boton.style.color="";
-
-                return true;                
-            }
-
-        }
-    </script>
     <footer>
         <p>&copy; 2025 Museo de la Memoria - Proyecto TecWeb</p>
     </footer>
-</body>
+    
+    <script src="javascript/formulario.js"></script>
 
+</body>
 </html>
