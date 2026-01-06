@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Museo de la Memoria - Cronología</title>
-
+    <!-- css añadido en archivos separados -->
+    <!-- cabecera.css -> general para todas, estilocronologia.css -> especial para cronologia.html -->
     <link rel="stylesheet" href="css/cabecera.css">
     <link rel="stylesheet" href="css/estilocronologia.css">
 </head>
 
 <body>
     <header>
+        <!-- barra para navegar - uso común en todas las páginas para mover entre todas -->
         <div class="caja-logo">
             <img src="cabecera/LOGOMUSEOMEMORIA_INV.png" alt="Logo" class="logo-foto">
             <div class="nombre-museo">
@@ -20,6 +22,7 @@
             </div>
         </div>
         
+        <!-- activo -> página actual | botón socio -> estilo diferente al resto -->
         <nav class="menu-navegacion">
             <a href="index.html">Home</a>
             <a href="cronologia.html" class="activo">Cronología</a>
@@ -30,25 +33,32 @@
         </nav>
     </header>
 
-    <div class="banner">
+    <!-- título decorativo para la parte superior -->
+    <div class="titulopag">
         <h1>Regresión Cartográfica</h1>
     </div>
 
+    <!-- contenido principal de la página: iniciado por main -->
     <main class="cuerpo-pagina">
         
+        <!-- contenedor principal para el mapa y sus elementos relacionados -->
         <div class="contenedor-visual-mapa">
             
+            <!-- columna para la leyenda del mapa -->
             <div class="columna-leyenda">
                 <img id="leyenda-img" src="imagenes/img_cronologia/leyenda-06.png" alt="Referencias">
             </div>
 
+            <!-- marco para mostrar la imagen del mapa -->
             <div class="marco-foto-mapa">
                 <img id="mapa-img" src="imagenes/img_cronologia/palestina-01.png" alt="Mapa de Palestina">
             </div>
             
+            <!-- controles para cambiar entre los años de la cronología -->
             <div class="controles-tiempo-vertical">
                 <div class="linea-guia-vertical"></div>
                 
+                <!-- botones para seleccionar un año específico -->
                 <button class="bolita-anio activa" onclick="cambiarEra('1917', this)">1917</button>
                 <button class="bolita-anio" onclick="cambiarEra('1947', this)">1947</button>
                 <button class="bolita-anio" onclick="cambiarEra('1948', this)">1948</button>
@@ -56,15 +66,14 @@
                 <button class="bolita-anio" onclick="cambiarEra('Presente', this)">HOY</button>
             </div>
 
+            <!-- columna para el texto explicativo de cada era -->
             <div class="columna-texto">
                 <div class="tarjeta-explicacion">
                     <div class="cuadro-negro-decorativo"></div>
-                    <div class="texto-interior">
-                        <h2 id="titulo-era">1917: Palestina antes de la creación de Israel</h2>
-                        <p id="texto-era">
-                            La transición de 1897 a 1917 representa el viaje del sionismo desde la periferia de la política europea hasta el centro de la diplomacia imperial. El Programa de Basilea proporcionó el objetivo (un hogar garantizado por el derecho público), y la Declaración Balfour proporcionó el medio (el patrocinio británico). Sin embargo, al insertar el proyecto nacional judío en la compleja demografía de Palestina bajo el paraguas imperial, la Declaración Balfour también institucionalizó las contradicciones —prometiendo patria a unos y derechos civiles a otros— que marcarían el destino de la región durante el siglo siguiente. La "simpatía" de Balfour fue, en última instancia, el cumplimiento pragmático de la "garantía pública" exigida en Basilea, pero a un costo geopolítico que ni Herzl ni Balfour pudieron prever completamente en sus respectivos tiempos.
-                        </p>
-                    </div>
+                    <h2 id="titulo-era">1917: Palestina antes de la creación de Israel</h2>
+                    <p id="texto-era">
+                        La transición de 1897 a 1917 representa el viaje del sionismo desde la periferia de la política europea hasta el centro de la diplomacia imperial. El Programa de Basilea proporcionó el objetivo (un hogar garantizado por el derecho público), y la Declaración Balfour proporcionó el medio (el patrocinio británico). Sin embargo, al insertar el proyecto nacional judío en la compleja demografía de Palestina bajo el paraguas imperial, la Declaración Balfour también institucionalizó las contradicciones —prometiendo patria a unos y derechos civiles a otros— que marcarían el destino de la región durante el siglo siguiente. La "simpatía" de Balfour fue, en última instancia, el cumplimiento pragmático de la "garantía pública" exigida en Basilea, pero a un costo geopolítico que ni Herzl ni Balfour pudieron prever completamente en sus respectivos tiempos.
+                    </p>
                 </div>
             </div>
 
@@ -72,10 +81,12 @@
 
     </main>
 
+    <!-- pié de página - igual en todas -->
     <footer>
         <p>&copy; 2025 Museo de la Memoria - Proyecto TecWeb</p>
     </footer>
 
+    <!-- archivo JavaScript para manejar la interacción de la cronología -->
     <script src="javascript/cronologia.js"></script>
 
 </body>

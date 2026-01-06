@@ -1,4 +1,3 @@
-
 const datosHistoria = {
     '1917': {
         titulo: "1917: Palestina antes de la creación de Israel",
@@ -29,37 +28,23 @@ const datosHistoria = {
         texto: "Desde 2012, la cuestión palestina entra en una fase de estancamiento territorial en la que no se producen ni retiradas ni redefiniciones formales de fronteras, sino la consolidación de una ocupación fragmentada. Cisjordania permanece dividida en un mosaico de enclaves palestinos separados por asentamientos, carreteras y controles israelíes, mientras Gaza queda aislada física y políticamente del resto del territorio. La ausencia de un proceso político efectivo ha transformado la ocupación en una condición estructural y normalizada, fijando un mapa de facto en el que el control territorial se impone sin resolución final, y donde la posibilidad de un Estado palestino continuo se diluye progresivamente.",
         img: "imagenes/img_cronologia/palestina-05.png",
         leyenda: "imagenes/img_cronologia/leyenda-09.png"
-}
+    }
 };
 
 function cambiarEra(anio, botonClickeado) {
     const info = datosHistoria[anio];
-    
-    if (info) {
-        
-        document.getElementById('titulo-era').innerText = info.titulo;
-        document.getElementById('texto-era').innerText = info.texto;
-        
-        
-        const imagenMapa = document.getElementById('mapa-img');
-        const imagenLeyenda = document.getElementById('leyenda-img');
 
-      
-        imagenMapa.style.opacity = 0;
-        imagenLeyenda.style.opacity = 0;
+    // Cambio textos
+    document.getElementById('titulo-era').innerText = info.titulo;
+    document.getElementById('texto-era').innerText = info.texto;
 
-    
-        setTimeout(() => {
-            imagenMapa.src = info.img;
-            if(info.leyenda) imagenLeyenda.src = info.leyenda;
-            
-            imagenMapa.style.opacity = 1; 
-            imagenLeyenda.style.opacity = 1;
-        }, 200);
-    }
+    // Cambio imagenes
+    document.getElementById('mapa-img').src = info.img;
+    document.getElementById('leyenda-img').src = info.leyenda;
 
-
+    // Actualizo botones
     let botones = document.querySelectorAll('.bolita-anio');
     botones.forEach(btn => btn.classList.remove('activa'));
+    
     botonClickeado.classList.add('activa');
 }
