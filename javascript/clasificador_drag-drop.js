@@ -1,3 +1,6 @@
+var aciertos = 0;
+var totalFotos = 6;
+
 document.addEventListener('DOMContentLoaded', function() {
     var fotos = document.querySelectorAll('.foto');
     var cajas = document.querySelectorAll('.caja-drop');
@@ -40,6 +43,12 @@ function soltar(e){
         foto.style.margin = "10px";
         foto.setAttribute("draggable", "false"); 
         foto.style.cursor = "default";
+        aciertos++;
+
+        if(aciertos == totalFotos){
+            document.getElementById("mensaje-victoria").style.display = "block";
+            document.getElementById("mensaje-victoria").scrollIntoView({behavior: "smooth"});
+        }
     }
     else{
         foto.style.borderColor = "red";

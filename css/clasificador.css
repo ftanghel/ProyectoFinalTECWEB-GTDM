@@ -98,6 +98,33 @@ h1, h2, h3{
     border-color: #333;
 }
 
+/*MENSAJE DE VICTORIA */
+#mensaje-victoria {
+    display: none;
+    text-align: center;
+    background-color: #dff0d8; 
+    color: #3c763d; 
+    border: 2px solid #d6e9c6;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#mensaje-victoria button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3c763d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#mensaje-victoria button:hover {
+    background-color: #2b542c;
+}
 
 
 footer {
