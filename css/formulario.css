@@ -6,8 +6,6 @@
             text-align: center;
             margin-bottom: 25px;                    
             font-size: 30px;
-            font-family: 'Libre Baskerville', serif;
-            font-weight: 700;
         }
 
 /*Así colocamos el  el texto a la izquierda y el form a la derecha */ 
@@ -127,13 +125,4 @@
 
         input[type="submit"]:hover {
             background-color: #fe5929;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 14px;
-            border-top: 1px solid #ddd; 
-            margin-top: 60px;
-            color: #666;
         }
