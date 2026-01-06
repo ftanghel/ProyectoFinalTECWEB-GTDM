@@ -5,8 +5,6 @@
             text-align: center;
             margin-bottom: 25px;
             font-size: 30px;
-            font-family: 'Libre Baskerville', serif;
-            font-weight: 700;
         }
 
 /*Para que se deslice de forma suave*/
@@ -177,6 +175,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            
+            width: 75%;
+            margin: 0 auto;
+            border: #231f20 2px solid;
         }
 
         .texto-cuadro p {
@@ -190,17 +192,8 @@
             background-color: #231f20;
             color: #fffdf6;
             font-size: 13px;
-            padding: 1px 10px;
+            padding: 5px 20px;
             font-weight: bold;
             border-radius: 5px;
         }
         
-/*Estilo del pie de pagina*/
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 14px;
-            border-top: 1px solid #ddd; 
-            margin-top: 60px;
-            color: #666;
-        }

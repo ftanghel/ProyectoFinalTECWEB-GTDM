@@ -1,10 +1,7 @@
 /* fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans:wght@400;700&display=swap');
 
-@font-face {
-    font-family: 'NOW';         
-    src: url('cabecera/Now-Bold.otf');    
-}
+/* reglas para toda las páginas */
 
 body {
     margin: 0;
@@ -13,7 +10,13 @@ body {
     background-color: #fffdf6; 
 }
 
+/* títulos comunes */
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
 
+/* cabecera de la página */
 header {
     background-color: #fffdf6;
     border-bottom: 2px solid #231f20; 
@@ -62,6 +65,7 @@ header {
     /*text-decoration: underline;*/
 }
 
+/*botón de formularios -> hazte socio*/
 .menu-navegacion a.btn-socio {
     background-color: #231f20;
     color: #fffdf6;
@@ -70,7 +74,6 @@ header {
     margin-left: 20px;
     border: 2px solid #231f20; 
     transition: all 0.3s ease; 
-    
 }
 
 .menu-navegacion a.btn-socio:hover,
@@ -80,4 +83,16 @@ header {
     color: white;
     box-shadow: 4px 4px 0px rgba(35, 31, 32, 0.3); 
     transform: translateY(-3px);
+}
+
+/* pie de página */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    border-top: 1px solid #ddd; 
+    margin-top: 80px; /* Separación con el contenido de arriba */
+    color: #666;
+    background-color: #fffdf6; /* Asegura que el fondo sea igual */
 }
